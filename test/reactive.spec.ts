@@ -62,4 +62,27 @@ describe("변경되는 값을 관창합니다.", () => {
     expect(callCount).toBe(3)
   })
 
+  //얕은복사 참조를 복사, 얕은 비교 참조를 비교한다
+  if ("같은 값이 들어오면 실행하지 않습니다. 배열(얕은 비교)") {
+    const state = observer({a: 1, b: 2, c: [3, 4]})
+
+    let computed = undefined
+    let callCount = 0;
+
+    const common = () => {
+      computed = state.a + state.b + state.c[0] + state.c[1]
+      callCount++
+    }
+
+    observe(common)
+
+    expect(computed).toBe(10);
+    expect(callCount).toBe(1)
+
+    state.c = [3, 4]
+
+    expect(computed).toBe(10);
+    expect(callCount).toBe(1)
+
+  }
 });

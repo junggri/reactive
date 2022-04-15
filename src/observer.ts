@@ -28,12 +28,21 @@ export function observer(obj: { [key: string]: any }) {
   return obj
 }
 
-
+//얕은 복사는 참조값이 복사되는거 //깊은복사는 참조값이 모두 끊어지고 값이 복시되는 것
 function checkIsSame(previous, current): boolean {
-  if (previous instanceof Object && current instanceof current) {
+  if (previous instanceof Object && current instanceof Object) {
+    if (previous instanceof Array && current instanceof Array) {
+
+    } else {
+
+    }
 
   } else {
     return previous === current
   }
+}
+
+
+function arrayShallowCompare() {
 
 }
