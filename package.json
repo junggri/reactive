@@ -1,0 +1,20 @@
+{
+  "name": "reactive-programming",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "junggri <gkgkgk6933@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@jest/globals": "^27.5.1",
+    "b": "^2.0.1",
+    "babel": "^6.23.0",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1"
+  }
+}
